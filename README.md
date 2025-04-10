@@ -1,8 +1,6 @@
 # Axion – Optical Quantum Random Number Generator
 
-![Axion Logo](https://img.shields.io/badge/Quantum-Randomness-green)
-
-> Built by Pushkar (14 y/o innovator, aka [QuantumCoreDev](https://github.com/QuantumCoreDev))
+Built by Pushkar (14 y/o innovator, aka [QuantumCoreDev](https://github.com/QuantumCoreDev))
 
 Axion is a microcontroller-powered QRNG that uses light, optics, and photon behavior to produce true quantum randomness.
 
