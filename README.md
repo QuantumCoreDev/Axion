@@ -92,5 +92,14 @@ Inspired by:
 
 ---
 
-## 📁 Repository Structure
+## 🔓 License
+MIT License — Open to all quantum creators.
+
+---
+
+## 🌐 Contact & Collaboration
+**Pushkar (QuantumCoreDev)**  
+> Connect on GitHub
+
+If you’re from **IITs, Google X, Microsoft Research**, or an open science org — collaborate to take Axion global!
 
