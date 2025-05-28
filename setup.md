@@ -1,6 +1,6 @@
 # 🔧 Setup Guide for Axion 
 
-This guide explains how to assemble, wire, and upload code to the Arduino UNO Mini Limited Edition for the Axion Elite project.
+This guide explains how to assemble, wire, and upload code to the Arduino UNO Mini Limited Edition for the Axion project.
 
 ---
 
