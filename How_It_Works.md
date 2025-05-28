@@ -1,6 +1,6 @@
-# How Axion Elite Works
+# How Axion Works
 
-Axion Elite is a real-world Arduino-powered hardware kit designed to simulate key experiments in quantum physics using light, sensors, and basic optics. Here's how each core module works in practice:
+Axion is a real-world Arduino-powered hardware kit designed to simulate key experiments in quantum physics using light, sensors, and basic optics. Here's how each core module works in practice:
 
 ---
 
