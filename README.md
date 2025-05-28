@@ -1,4 +1,4 @@
-# Axion Elite: Quantum Physics Hardware Simulator
+# Axion : Quantum Physics Hardware Simulator
 
 **Created by Pushkar (QuantumCoreDev)**
 
