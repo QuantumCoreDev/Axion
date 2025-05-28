@@ -101,5 +101,14 @@ MIT License — Open to all quantum creators.
 **Pushkar (QuantumCoreDev)**  
 > Connect on GitHub
 
+
+---
+
+## 📄 Documentation
+
+- [🧠 How It Works](https://github.com/QuantumCoreDev/Axion/blob/main/How_It_Works.md)
+- [🛠️ Setup Guide](https://github.com/QuantumCoreDev/Axion/blob/main/setup.md)
+
+
 If you’re from **IITs, Google X, Microsoft Research**, or an open science org — collaborate to take Axion global!
 
