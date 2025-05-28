@@ -97,6 +97,6 @@ This guide explains how to assemble, wire, and upload code to the Arduino UNO Mi
 - Elevate mirrors and lasers to same height (~2–3cm)
 - Secure optics using glue tack or foam mounts
 
----
+--- 
 
 > With proper care and calibration, Axion becomes a functional hands-on physics lab. Ideal for presentations, demo days, or quantum learning fairs.
