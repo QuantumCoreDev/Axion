@@ -2,20 +2,12 @@ MIT License
 
 Copyright (c) 2025 Pushkar Kharad
 
-Permission is hereby granted, free of charge, to any person obtaining a copy
-of this software and associated documentation files (the "Software"), to deal
-in the Software without restriction, including without limitation the rights
-to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
-copies of the Software, and to permit persons to whom the Software is
-furnished to do so, subject to the following conditions:
+Axion is an open-source educational hardware project developed and maintained by Pushkar (QuantumCoreDev). This project is licensed under the MIT License, effective from May 22, 2025, 11:30 PM IST.
 
-The above copyright notice and this permission notice shall be included in all
-copies or substantial portions of the Software.
+You are permitted to freely use, modify, distribute, or build upon this project for personal, academic, and commercial purposes. Any use must include clear attribution to the original creator. This includes forks, research papers, product integrations, or educational materials based on this project.
 
-THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
-IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
-FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
-AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
-LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
-OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
-SOFTWARE.
+The project is provided as-is, without any express or implied warranties. This means there is no guarantee of fitness for a particular purpose, performance, or security. All experiments in Axion Elite simulate fundamental quantum physics principles for learning and demonstration purposes only. They are not certified for critical applications, real quantum computing, or industrial deployment.
+
+By using or contributing to this project, you accept the terms of the MIT License and agree to keep the spirit of open science and transparent development alive. Please retain this license section and author credit in all distributions and forks.
+
+All contributions are welcome, provided they adhere to these licensing terms and maintain educational or ethical intentions.
