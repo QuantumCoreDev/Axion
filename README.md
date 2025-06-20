@@ -1,114 +1,112 @@
-# Axion : Quantum Physics Hardware Simulator
+# Axion: Quantum Physics Hardware Simulator
 
 **Created by Pushkar (QuantumCoreDev)**
 
-Axion Elite is a cutting-edge open-source quantum hardware education project designed to simulate key phenomena in quantum mechanics using an Arduino Uno Mini Limited Edition. It includes four interactive physical experiments inspired by H.C. Verma’s physics and real quantum optics labs — all packed inside a 25x15x5 cm box.
+Axion is a cutting-edge open-source quantum hardware simulator that brings four foundational quantum physics experiments to life — now upgraded with a **fifth mode** that converts quantum entropy into real **music**!
 
 ---
 
 ## 🔬 Key Experiments
 
-### 1. **Quantum Random Number Generator (QRNG)**
-- Uses analog noise from a photodiode to generate true quantum randomness.
-- Outputs binary, decimal, and hexadecimal on OLED + Serial.
+1. **Quantum Random Number Generator (QRNG)**
+2. **Polarization Explorer (Malus's Law)**
+3. **Photoelectric Effect Simulator**
+4. **Mach–Zehnder Interferometer (MZI)**
+5. **Quantum Music Synth 🎵** *(NEW!)*
 
-### 2. **Polarization Explorer**
-- Simulates qubit orientation using linear polarizers and rotating filters.
-- Visualizes Malus's Law with a photodiode sensor.
-
-### 3. **Photoelectric Effect Simulator**
-- Demonstrates Einstein’s photoelectric effect using a laser and metal plate.
-- Captures energy of emitted electrons via analog readings.
-
-### 4. **Mach–Zehnder Interferometer (MZI)**
-- Mimics interference pattern behavior using dual-beam splitters and a photodiode.
-- Allows optical path change and detects resulting intensity shifts.
+Each experiment is built using real sensors, light sources, and an Arduino UNO Mini, housed in a 25x15x5 cm chassis.
 
 ---
 
-## 🧰 Components Used (Top & Branded)
+## 📸 Hardware Components
 
-| Component                   | Quantity | Description                               |
-|----------------------------|----------|-------------------------------------------|
-| Arduino Uno Mini Limited   | 1        | Official ABX00062 Board                    |
-| SSD1306 OLED Display (I2C) | 1        | 0.96” Display for output                   |
-| Photodiode                 | 3        | For QRNG, MZI, and Polarization           |
-| Laser Module               | 2        | Red visible lasers for Photoelectric + MZI|
-| IR LED                     | 1        | For alternate optical path                |
-| LDR / Light Sensor         | 1        | For additional light measurements         |
-| Polarizing Film Sheet      | 2        | For polarization experiment               |
-| Beamsplitter               | 2        | Realistic beam splitting setup            |
-| Servo Motor (SG90)         | 2        | To rotate polarizers or mirrors           |
-| Breadboard + Jumper Wires  | —        | Prototyping base                          |
-| 10k Resistors              | 2–3      | For voltage dividers                      |
-| Pushbutton                 | 1        | Mode selector                             |
-| 3.7V Li-ion or 9V Battery  | 1        | Power supply                              |
-
----
-
-## ⚡ Connection Diagram
-
-A complete schematic (`/schematic/Axion_Schematic.png`) is provided, but here’s the summary:
-
-| Arduino Pin | Connected To            | Purpose                      |
-|-------------|--------------------------|------------------------------|
-| A0          | QRNG Photodiode          | Analog noise source          |
-| A1          | Photoelectric Sensor     | e⁻ energy read               |
-| A2          | MZI Photodiode           | Interference detection       |
-| A3          | Polarization Sensor      | Light through polarizers     |
-| 2 (D2)      | Mode Selector Button     | Switches experiment          |
-| 3 (D3)      | Laser (PE)               | Laser ON/OFF                 |
-| 4 (D4)      | Laser (MZI)              | Laser for MZI                |
-| SDA, SCL    | OLED Display (I2C)       | Display output               |
+| Component                  | Qty | Description                          |
+|---------------------------|-----|--------------------------------------|
+| Arduino UNO Mini          | 1   | ABX00062 official                    |
+| OLED Display (SSD1306)    | 1   | 128x64 I2C screen                    |
+| Photodiodes               | 3   | Light detection                      |
+| Red Laser Modules         | 2   | Used in PE & MZI                     |
+| IR LED                    | 1   | Optional alternate path              |
+| LDR / Light Sensor        | 1   | Backup/visual                        |
+| Polarizing Film           | 2   | For Malus’s Law                      |
+| Beamsplitters             | 2   | For MZI                              |
+| Servo Motors (SG90)       | 2   | Polarizer/Mirror rotation            |
+| Button                    | 1   | Mode selector                        |
+| Resistors (10k)           | 2–3 | Voltage divider                      |
+| Breadboard + Wires        | —   | Prototyping                          |
+| Battery / USB Power       | 1   | 3.7V/9V or USB                       |
 
 ---
 
 ## 🧠 How It Works
 
-### 🧩 Mode Switching
-The device uses a button connected to digital pin 2. Each press cycles between:
-- `QRNG`
-- `Polarization Explorer`
-- `Photoelectric Effect`
-- `Mach–Zehnder Interferometer`
+Each press of the button cycles Axion through the following experiments:
 
-### 💡 OLED Output
-The SSD1306 OLED displays data specific to each experiment:
-- QRNG: Random bits and bytes
-- Polarization: Intensity via Malus’s Law
-- PE: Voltage indicating emitted electron energy
-- MZI: Interference pattern values
-
-### 📊 Serial Monitor
-Full debugging/logging is available over Serial @9600 baud.
+| Mode | Experiment                    | Output                               |
+|------|-------------------------------|--------------------------------------|
+| 0    | QRNG                          | OLED & Serial – Random Bits/Bytes    |
+| 1    | Polarization Explorer         | OLED – Angle vs Intensity            |
+| 2    | Photoelectric Effect          | OLED – Emitted Electron Energy       |
+| 3    | Mach–Zehnder Interferometer   | OLED – Light Interference Patterns   |
+| 4    | Quantum Music Synth 🎶        | Serial – Entropy to MIDI             |
 
 ---
 
-## 🧪 Real-World Inspiration
-Inspired by:
-- **HC Verma Vol I & II**: Photoelectric, Interference, and Polarization chapters
-- **Google’s Quantum Playground**
-- **IBM Qiskit Labs**
+## 🎵 Quantum Music Synth (Mode 4)
+
+> **Hear the universe’s randomness.** This mode transforms real quantum entropy into generative ambient music using MIDI.
+
+### 🧬 Concept
+
+This experiment uses analog noise from a photodiode (QRNG module) to output entropy characters (`1–9`, `A–I`). These characters are mapped to musical notes and rendered into a `.mid` file — letting you *hear randomness* as cosmic-sounding audio.
+
+### ⚙️ How It Works
+
+1. Arduino reads noisy photodiode values (`analogRead` from pin A0).
+2. Values are mapped to entropy characters:
+   `'1'–'9' → MIDI notes 60–74`, `'A'–'I' → MIDI notes 76–89`
+3. Characters are streamed via Serial.
+4. A Python script converts these into a MIDI file.
+
+### 💻 How To Use
+
+#### Step 1: Switch to Mode 4
+- Press the button on Axion until OLED shows:
+  ```
+  Quantum Music
+  Entropy: X
+  ```
+
+#### Step 2: Run Python MIDI Extractor
+```bash
+pip install pyserial midiutil
+python python/axion_music_extractor.py
+```
+This will create a file:
+```bash
+Axion_Music.mid
+```
+
+### 🎧 Play the Music
+Open `Axion_Music.mid` in:
+- [🎼 Online Sequencer](https://onlinesequencer.net)
+- 🎹 Audacity / LMMS / Sonic Pi
+- 🎛️ Any DAW or MIDI Player
+
+### 🛠️ Advanced Ideas
+- Real-time MIDI via `pygame.midi`
+- Scale mapping (Raag Bhairavi, Lydian, etc.)
+- Multi-channel entropy layering for harmony
 
 ---
 
-## 🔓 License
-MIT License — Open to all quantum creators.
+
+## 📜 License
+MIT License — Free to use, remix, and expand.
 
 ---
 
-## 🌐 Contact & Collaboration
+## 🌐 Connect
 **Pushkar (QuantumCoreDev)**  
-> Connect on GitHub
-
-
----
-
-## 📄 Documentation
-
-- [🧠 How It Works](https://github.com/QuantumCoreDev/Axion/blob/main/How_It_Works.md)
-- [🛠️ Setup Guide](https://github.com/QuantumCoreDev/Axion/blob/main/setup.md)
-
-
-If you’re from **IITs, Google X, Microsoft Research**, or an open science org — collaborate to take Axion global!
-
+GitHub: [@QuantumCoreDev](https://github.com/QuantumCoreDev)  
+> If you're from Google X, Microsoft Research, or an IIT — reach out. Let's take Axion global. 🌍
