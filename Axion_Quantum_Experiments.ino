@@ -1,3 +1,6 @@
+// Axion v1.1: Quantum Physics Hardware Simulator with Music Synth
+// Created by Pushkar (QuantumCoreDev)
+
 #include <Servo.h>
 #include <Adafruit_GFX.h>
 #include <Adafruit_SSD1306.h>
@@ -7,7 +10,7 @@
 #define OLED_RESET -1
 Adafruit_SSD1306 display(OLED_WIDTH, OLED_HEIGHT, &Wire, OLED_RESET);
 
-// Pins
+// Pin Definitions
 #define QRNG_PIN A0
 #define PE_PIN A1
 #define MZI_PIN A2
@@ -36,7 +39,7 @@ void setup() {
   servoMZI.attach(SERVO_MZI);
 
   if (!display.begin(SSD1306_SWITCHCAPVCC, 0x3C)) {
-    while (1); // Halt
+    while (1);
   }
   display.clearDisplay();
   display.setTextSize(1);
@@ -46,7 +49,7 @@ void setup() {
 
 void loop() {
   if (digitalRead(BTN_PIN) == LOW && millis() - lastDebounce > debounceDelay) {
-    mode = (mode + 1) % 4;
+    mode = (mode + 1) % 5;
     lastDebounce = millis();
     display.clearDisplay();
   }
@@ -56,6 +59,7 @@ void loop() {
     case 1: runPolarizationExplorer(); break;
     case 2: runPhotoelectricEffect(); break;
     case 3: runMachZehnder(); break;
+    case 4: runQuantumMusic(); break;
   }
 }
 
@@ -119,4 +123,27 @@ void runMachZehnder() {
     display.clearDisplay();
   }
   digitalWrite(LASER_MZI, LOW);
+}
+
+void runQuantumMusic() {
+  int val = analogRead(QRNG_PIN);
+  char entropyChar;
+  int mapped = map(val, 0, 1023, 0, 17);
+  if (mapped < 9)
+    entropyChar = '1' + mapped;
+  else
+    entropyChar = 'A' + (mapped - 9);
+
+  Serial.print(entropyChar);
+  Serial.print(" ");
+
+  display.setCursor(0, 0);
+  display.print("Quantum Music");
+  display.setCursor(0, 10);
+  display.print("Entropy: ");
+  display.print(entropyChar);
+  display.display();
+
+  delay(100);
+  display.clearDisplay();
 }
